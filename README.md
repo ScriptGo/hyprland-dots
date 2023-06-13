@@ -1,4 +1,4 @@
-==ArchLinux安装参考==
+==ArchLinux HyprLand 配置参考==
 
 ## 配置控制台字体
 
