@@ -1,0 +1,169 @@
+{
+  "id": "bar-0",
+  "layer": "top",
+  "position": "top",
+  "spacing": 5,
+
+  "modules-left": ["clock", "clock#date"],
+  "modules-center": ["wlr/workspaces"],
+  "modules-right": ["bluetooth", "pulseaudio", "pulseaudio#microphone", "network", "battery", "custom/pacman", "custom/power"],
+
+  "wlr/workspaces": {
+    "sort-by-number": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+       "1": "<span color='#00FF00'></span>",
+       "2": "<span color='#FFFFFF'></span>",
+       "3": "<span color='#FFFF00'></span>",
+       "4": "<span color='#00FFFF'></span>",
+       "5": "<span color='#A020F0'></span>",
+       "6": "<span color='#FF0000'></span>",
+       "default": "<span color='#0000FF'></span>"
+    },
+
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "on-click": "activate"
+  },
+
+  "clock": {
+    "timezone": "Asia/Shanghai",
+    "locale": "zh_CN.UTF-8",
+    "format": "<span color='#b16286'>󰅐 </span>{:%H:%M}"
+  },
+
+   "clock#date": {
+    "format": "<span color='#458588'>󰸗 </span>{:%A %m/%d}"
+  },
+
+  "bluetooth": {
+    "format-on": "<span color='#458588'> </span>",
+    "format-off": "<span color='#cc241d'> </span>",
+    "format-connected": "<span color='#689d6a'> </span>{device_alias}",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+
+    "on-click": "blueman-manager",
+    "on-click-right": "alacritty -e bluetoothctl"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "<span color='#d79921'>{icon}</span> {volume}%",
+    "format-muted": "<span color='#cc241d'>󰖁</span> Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["󰕿", "󰖀", "󰕾", "󰕾"]
+    },
+
+    "on-click": "amixer -q -D pulse sset Master toggle",
+    "on-click-right": "pavucontrol"
+  },
+
+  "pulseaudio#microphone": {
+    "scroll-step": 5,
+    "format": "{format_source}",
+    "format-source": "<span color='#689d6a'></span> {volume}%",
+    "format-source-muted": "<span color='#cc241d'></span> Muted",
+
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "on-click": "pamixer --default-source -t"
+    },
+
+  "network": {
+    "format-wifi": "<span color='#98971a'>{icon}</span> {essid}",
+    "format-icons": ["󰤬", "󰤤", "󰤧", "󰤪"],
+    "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
+    "format-disconnected": "<span color='#cc241d'>󰤮 </span>Disconnected",
+    "on-click": "~/.scripts/wifi-menu.sh"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}%",
+    "tooltip": true,
+    "on-click": "alacritty -e btop -p 1",
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {}%",
+    "on-click": "alacritty -e btop -p 2"
+  },
+
+  "temperature": {
+    "interval": 5,
+    "critical-threshold": 50,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", "", ""],
+    "tooltip": false,
+    "on-click": "alacritty -e btop -p 3",
+ },
+
+  "backlight": {
+    // "device": "acpi_video1",
+    // "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "battery": {
+    "interval": 3,
+    "bat": "BAT0",
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "format-charging": "󱐋 {icon} {capacity}%",
+    "format-plugged": " {capacity}%",
+    "tooltip-format": "{power} W, {time}"
+  },
+
+  "tray": {
+    "icon-size": 24,
+    "spacing": 10
+  },
+
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{icon} {name}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "custom/pacman": {
+    "interval": 350,
+    "format": "<span color='#458588'></span> {}",
+    "exec": "checkupdates | wc -l",
+    "exex-if": "checkupdates",
+    "on-click": "alacritty -e yay -Syyu && pkill -SIGRTMIN+8 waybar",
+    "on-click-right": "pamac-manager",
+    "signal": 8,
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.scripts/powermenu.sh"
+  }
+}

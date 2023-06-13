@@ -1,0 +1,93 @@
+* {
+  font-family:  "FiraCode Nerd Font", "Sarasa Mono SC";
+  font-size: 16px;
+}
+
+window#waybar {
+  background: transparent;
+  color: #ebdbb2;
+}
+
+/* Groups */
+.modules-right, .modules-left, .modules-center {
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 15px;
+}
+
+label, button {
+  padding: 0 3px;
+}
+
+/* labels inside the workspace buttons are clean */
+button label {
+  background: transparent;
+}
+
+tooltip {
+  background: #282828;
+  color: #ebdbb2;
+  border: solid 1px #BDAE93;
+  border-radius: 15px;
+}
+tooltip label {
+  background: #282828;
+  color: #ebdbb2;
+  text-shadow: none;
+  border: none;
+}
+
+#workspaces {
+  background: transparent;
+}
+#workspaces button {
+  border-radius: 15px;
+  color: #928374;
+  padding: 0 7px;
+}
+#workspaces button.active {
+  color: #282828;
+  background: #427b58;
+}
+#workspaces button.active:hover {
+  background: #689d6a;
+}
+#workspaces button.urgent {
+  color: #cc241d;
+}s
+
+#clock {}
+#pulseaudio {}
+#pulseaudio.muted {}
+#network {}
+#network.disconnected {}
+
+#battery {}
+#battery.charging, #battery.plugged {
+  color: #ffffff;
+  background: #26A65B;
+}
+#battery.critical:not(.charging) {
+  background: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu {}
+#memory {}
+#temperature.critical {}
+#temperature {}
+#idle_inhibitor {}
+#idle_inhibitor.activated {}
+#tray {}
+#tray menu {}
+#tray > .passive {}
+#tray > .active {}
+#tray > .needs-attention {}
+#custom-power {
+  color: #cc241d;
+}

@@ -1,0 +1,79 @@
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+
+
+format = """$directory"""
+right_format = """$git_branch$git_status$cmd_duration"""
+
+# 在提示符之间插入空行
+add_newline = true
+
+[character]
+disabled = false
+# success_symbol = '[ ➜ ](bold green)'
+error_symbol = "[  ](bold red)"
+vicmd_symbol = "[  ](#78b892)"
+
+[username]
+disabled = false
+show_always = true
+format = "[$user](bold white)"
+
+[hostname]
+disabled = false
+ssh_only = true
+format = "[$hostname](bold blue) "
+
+[directory]
+disabled = false
+format = "[](fg:#6791c9 bg:#232526)[](fg:#232526 bg:#6791c9)[](fg:#6791c9 bg:none)[](fg:#232526 bg:none)[$path](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+truncation_length = 3
+truncate_to_repo=false
+home_symbol = "~"
+
+[git_branch]
+disabled = false
+format = "[](fg:#78b892 bg:#232526)[](fg:#282c34 bg:#78b892)[](fg:#78b892 bg:none)[](fg:#232526 bg:none)[$branch](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+symbol = "[ ](bold blue)"
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "green"
+
+[git_state]
+format = "[\\($state( $progress_current / $progress_total)\\)](yellow) "
+cherry_pick = "CHERRY-PICKING(bold red)"
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+
+[git_status]
+format="[](fg:#67afc1 bg:#232526)[](fg:#232526 bg:#67afc1)[](fg:#67afc1 bg:none)[](fg:#232526 bg:none)[$all_status$ahead_behind](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+conflicted = "= "
+ahead = "⇡ ${count} "
+behind = "⇣ ${count} "
+# diverged = "⇕ "
+diverged = "⇕⇡${ahead_count} ⇣${behind_count} "
+up_to_date = ""
+untracked = "?${count} "
+stashed = "$ "
+modified = "!${count} "
+staged = '[++\($count\)](green) '
+renamed = "»${count} "
+deleted = "${count} "
+
+
+[cmd_duration]
+disabled = false
+min_time = 1
+format = "[](fg:#bc83e3 bg:#232526)[](fg:#232526 bg:#bc83e3)[](fg:#bc83e3 bg:none)[](fg:#232526 bg:none)[$duration](fg:#edeff0 bg:#232526)[](fg:#232526 bg:#232526)"
+
+
