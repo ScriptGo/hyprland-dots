@@ -1,142 +1,57 @@
-==ArchLinux HyprLand 配置参考==
-
-## 配置控制台字体
+<div align="center"> <h1> ArchLinux HyprLand 配置参考 </h1>  </div>
 
 
 
-## 验证引导模式
+- 首先要有一个安装好且干净的 ArchLinux 环境
+- 确保网络环境已经配置好(NetworkManager服务已配置为开机自启)
+- 镜像源已经配置好
+- 已经创建好一个普通用户账户
 
-`ls /sys/firmware/efi/efivars`
 
-- 如果有大量输出，则为 `UEFI`模式
-  -
 
-## 配置网络
+**现在用普通用户登录系统，从零开始配置 HyprLand !**
 
-### 有线连接
 
-正常来说，只要插上一个已经联网的路由器分出的网线（DHCP），直接就能联网。
 
-可以等待几秒等网络建立连接后再进行下一步测试网络的操作。
+**一. 连接无线网络**
 
-### 无线连接
+显示附近的 Wi-Fi 网络  
+`nmcli dev wifi list`  
 
-使用 `iwctl` 配置无线连接
+连接无线网络  
+`nmcli dev wifi connect SSID password "网络密码"` 
 
-1. 进入交互模式
-   `iwctl`
-
-2. 列出无线网卡的设备名, 比如 wlan0
-   `device list`
-
-3. 扫描无线网络
-   `station wlan0 scan`
-
-4. 列出所有无线网络
-   `station wlan0 get-networks`
-
-5. 连接无线网络
-   `station wlan0 connect SSID` # SSID代表无线的名称，回车后输入密码即可
-
-6. 连接成功后退出
-   `exit`
-
-*****如果无线网卡无法正常连接网络**
-
-1. 首先退出 `iwctl` 交互模式
-2. 检查无线网卡的硬件开关是否处于打开状态(大部分笔记本的无线网卡默认都是打开的)
-3. 如果是在`第2步`，的显示列表的 Power字段显示为 `off`,说明你的 BIOS 没有开启无线网卡的开关可以参考下列的命令来开启 WIFI
-
-rfkill list #查看无线连接 是否被禁用(yes表示被禁用)
-
-```
-0: hci0: Bluetooth
-	Soft blocked: no
-	Hard blocked: no
-1: ideapad_wlan: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
-2: ideapad_bluetooth: Bluetooth
-	Soft blocked: no
-	Hard blocked: no
-3: phy0: Wireless LAN
-	Soft blocked: no
-	Hard blocked: no
-```
-
-首先确认系统已经启用网络接口
-
-ip link  #列出网络接口信息，如不能联网的设备叫wlan0
-ip link set wlan0 up #比如无线网卡看到叫 wlan0
-
-若看到类似Operation not possible due to RF-kill的报错，尝试rfkill unblock wifi来解锁无线网卡。
-
-`rfkill unblock wifi`
-
-### 测试网络连通
+**测试网络**
 
 通过 ping 命令测试网络连通性：
 `ping -c 3 www.archlinux.org`
 
 稍等片刻，若能看到数据返回，说明已经联网。
 
-## 同步系统时钟
 
-将系统时间与网络时间进行同步
-`timedatectl set-ntp true`
 
-查看服务状态
-`timedatectl status`
+**二. 更新系统**
 
-## 分区
+`sudo pacman -Syyu`
 
-### 硬盘的命名
 
-| 硬盘类型      | 硬盘命名  | 备注                                  |
-| ------------- | --------- | ------------------------------------- |
-| 固态硬盘(SSD) | nvmexnxpx | x 表示数字                            |
-| 机械硬盘(HDD) | sdx       | x 表示小写字母(默认从 a 到 p中的一个) |
 
-- nvme0n1p2 : 0 代表，n1，p2
-- sda1 : a 代表第一块硬盘，1 代表这块硬盘的第一个分区
-  ###
+**三. 安装 HyprLand**
 
-| 硬盘分区  | 对应的系统分区 |
-| --------- | -------------- |
-| nvme0n1p1 | efi            |
-| nvme0n1p2 | swap           |
-| nvme0n1p3 | /              |
-| sda1      | home           |
+`sudo pamcan -S hyprland`
 
-## 挂载分区
 
-先挂载根分区，再挂载 EFI 分区。
 
-## 配置镜像源
+**四. 安装 qt-wayland 支持**
 
-### 禁用 reflector
+`sudo pacman -S qt5-wayland qt6-wayland glfw-wayland `
 
-reflector 会为你选择速度合适的镜像源，但其结果并不准确，同时会清空配置文件中的内容。
 
-`systemctl stop reflector.service`
 
-通过以下命令查看该服务是否被禁用，按下 q 退出结果输出：
+**五. **
 
-`systemctl status reflector.service`
 
-### 手动修改镜像源
 
-使用 nano 编辑 `/etc/pacman.d/mirrorlist`文件，添加以下内容:
-
-```
-Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-
-# 一些较为优质的国际源
-Server = https://mirror.archlinux.tw/ArchLinux/$repo/os/$arch
-Server = https://mirrors.cat.net/archlinux/$repo/os/$arch
-Server = https://mirror.aktkn.sg/archlinux/$repo/os/$arch
-```
 
 ## 镜像
 
@@ -275,28 +190,7 @@ yay -S ttf-material-design-icons-webfont
 
 
 
-## zsh
 
-1. 切换shell
-
-`chsh -s /bin/zsh`   # 提示输入密码，然后注销重登陆即可
-
-2. 安装插件
-
-```
-yay -S zsh-z-git        # 快速跳转
-```
-
-3. 修改 .zshrc 文件，加入以下内容
-
-```bash
-source /usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh
-bindkey ',' autosuggest-accept       #   使用逗号补全
-```
-
-4. 重载文件
-
-`source .zshrc`
 
 ## tmux
 

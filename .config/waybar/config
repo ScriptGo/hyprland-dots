@@ -62,7 +62,7 @@
       "default": ["󰕿", "󰖀", "󰕾", "󰕾"]
     },
 
-    "on-click": "amixer -q -D pulse sset Master toggle",
+    "on-click": "pamixer --get-default-sink -t",
     "on-click-right": "pavucontrol"
   },
 
