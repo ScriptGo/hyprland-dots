@@ -27,7 +27,7 @@ button label {
 tooltip {
   background: #282828;
   color: #ebdbb2;
-  border: solid 1px #BDAE93;
+  border: solid 1px #FE8019;
   border-radius: 15px;
 }
 tooltip label {
@@ -48,6 +48,7 @@ tooltip label {
 #workspaces button.active {
   color: #282828;
   background: #427b58;
+  border: solid 2px #FE8019;
 }
 #workspaces button.active:hover {
   background: #689d6a;
