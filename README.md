@@ -14,13 +14,16 @@
 
 ```
 systemctl enable NetworkManager
-systemctl enable dhcpcd
 systemctl enable sshd
 ```
 
-==重启系统以便上面的服务生效==
+**重启系统以便上面的服务生效**
+
+
 
 **1.1 使用宽带连接网络(略)**
+
+
 
 **1.2 使用无线网连接网络**
 
@@ -32,6 +35,8 @@ systemctl enable sshd
 连接无线网络  
 `nmcli dev wifi connect SSID password "网络密码"` 
 
+
+
 **1.3 测试网络**
 
 通过 ping 命令测试网络连通性:  
@@ -39,13 +44,19 @@ systemctl enable sshd
 
 稍等片刻，若能看到数据返回，说明已经联网。
 
+
+
 **2. 创建用户**
 
 `useradd -m -G wheel <用户名>`
 
+
+
 **2.1 设置用户密码**
 
 `passwd <用户名>`
+
+
 
 **2.2 设置用户权限**
 
@@ -62,9 +73,12 @@ systemctl enable sshd
 去掉 `%wheel ` 前面的 #
 
 
+
 **3. 配置 pacman.conf**
 
 文件位置: `/etc/pacman.conf`
+
+
 
 **3.1 启用 `[multilib]`**
 
@@ -73,6 +87,8 @@ systemctl enable sshd
 #[multilib]
 #Include = /etc/pacman.d/mirrorlist
 ```
+
+
 
 **3.2 启用 `[archlinuxcn]`**
 
@@ -86,6 +102,8 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 # Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 # Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
+
+
 
 **3.3  彩蛋**
 
@@ -102,13 +120,19 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 ILoveCandy
 ```
 
+
+
 **3.4 更新源**
 
 `pacman -Syy`
 
+
+
 **3.5 导入密钥**
 
 `pacman -S archlinuxcn-keyring`
+
+
 
 **3.6 清理软件包缓存**
 
@@ -240,12 +264,12 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 务必保证 Target 项所设置的软件包与你在前面的安装过程中所使用的相符（例如nvidia 或 nvidia-dkms 或 nvidia-lts 或 nvidia-ck-something）。
 
-**AMD显卡安装请参考ArchWiki**
-
 
 6. 重启系统
 
 
+
+**AMD显卡安装请参考ArchWiki**
 
 
 
@@ -253,7 +277,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 
 
-==用普通用户登录系统==
+**用普通用户登录系统**
 
 
 
@@ -332,8 +356,6 @@ sudo pacman -Syyu`
 
 **到此，就可以重启系统了**
 
-以下的操作，可以进入桌面进行了。
-
 
 
 ## 软件管理
@@ -346,7 +368,7 @@ sudo pacman -Syyu`
 
 执行以下命令修改 aururl :
 
- `yay --aururl "https://aur.archlinux.org" --save` # ==请换成国内的源==
+ `yay --aururl "https://aur.archlinux.org" --save` # 请换成国内的源
 
 配置文件位于 ~/.config/yay/config.json
 
@@ -398,19 +420,19 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 
 ## Misc
 
-| Type       | Package(s)                    | 备注            |
-| ---------- | ----------------------------- | --------------- |
-| MD编辑器   | sudo pacman -S typora         |                 |
-| 磁盘管理   | sudo pacman -S gparted        |                 |
-| 启动盘制作 | sudo pacman -S ventoy         |                 |
-| 防火墙     | sudo pacman -S gufw           | sudo ufw enable |
-| 笔记       | sudo pacman -S joplin-desktop |                 |
-| 字体管理器 | sudo pacman -S font-manager   |                 |
-| 办公软件   | sudo pacman -S libreoffice    | 选择 [1]        |
-| 系统备份   | sudo pacman -S timeshift      |                 |
-| 图片处理   | sudo pacman -S gimp inkscap   |                 |
-| 科学上网   | sudo pacman -S v2ray-desktop  |                 |
-| 浏览器     | yay -S google-chrome          |                 |
+| Type       | Package(s)                    | 备注               |
+| ---------- | ----------------------------- | ------------------ |
+| MD编辑器   | sudo pacman -S typora         |                    |
+| 磁盘管理   | sudo pacman -S gparted        |                    |
+| 启动盘制作 | sudo pacman -S ventoy         |                    |
+| 防火墙     | sudo pacman -S gufw           | sudo ufw enable    |
+| 笔记       | sudo pacman -S joplin-desktop |                    |
+| 字体管理器 | sudo pacman -S font-manager   |                    |
+| 办公软件   | sudo pacman -S libreoffice    | 直接回车或选择 [1] |
+| 系统备份   | sudo pacman -S timeshift      |                    |
+| 图片处理   | sudo pacman -S gimp inkscap   |                    |
+| 科学上网   | sudo pacman -S v2ray-desktop  |                    |
+| 浏览器     | yay -S google-chrome          |                    |
 
 
 
@@ -439,7 +461,11 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 
 `chsh -s $(which zsh)`
 
-==注销或重启后生效==
+
+
+**注销或重启后生效**
+
+
 
 2. 常用插件
 
@@ -469,8 +495,7 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 | 播放器     | sudo pacman -S mpd mpc ncmpcpp           |      |
 | 音频可视化 | sudo pacman -S cava                      |      |
 
-
-mpd 配置
+**mpd 配置**
 
 复制配置文件到 ~/.config 目录下
 
@@ -497,7 +522,9 @@ systemctl enable mpd.service --user # 开机自启
 
 ## 语言包
 
-==纯英文环境可以忽略这步==
+
+
+**纯英文环境可以忽略这步**
 
 | Type       | Package(s)                             | 备注 |
 | ---------- | -------------------------------------- | ---- |
