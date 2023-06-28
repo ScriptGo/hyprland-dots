@@ -122,6 +122,10 @@ ILoveCandy
 
 
 
+**保存并退出**
+
+
+
 **3.4 更新源**
 
 `pacman -Syy`
@@ -354,10 +358,6 @@ sudo pacman -Syyu`
 
 
 
-**到此，就可以重启系统了**
-
-
-
 ## 软件管理
 
 | Type     | Package(s)           | 备注 |
@@ -432,6 +432,7 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 | 系统备份   | sudo pacman -S timeshift      |                    |
 | 图片处理   | sudo pacman -S gimp inkscap   |                    |
 | 科学上网   | sudo pacman -S v2ray-desktop  |                    |
+| 快捷键管理 | yay -S swhkd-bin              |                    |
 | 浏览器     | yay -S google-chrome          |                    |
 
 
@@ -452,6 +453,10 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 | 简化版 man 手册        | sudo pacman -S tldr                          | `第一次使用tldr之前，需要更新一下缓存 tldr --update` |
 | 模糊查找               | sudo pacman -S fzf                           |                                                      |
 | 其他                   | sudo pacman -S zenity tree lolcat            |                                                      |
+
+
+
+**重启系统**
 
 
 
@@ -571,13 +576,19 @@ sudo ./install.sh -t       # install Tela theme
 
 2. 手动安装
 
+
+
 2.1. 克隆下面这个仓库并切换到 `grub` 目录
 
 `git clone https://github.com/catppuccin/grub.git && cd grub`
 
+
+
 2.2. 复制 `src` 目录内的所有文件至 `/usr/share/grub/themes/`
 
 `sudo cp -r src/* /usr/share/grub/themes/`
+
+
 
 2.3. 编辑 `/etc/default/grub` 文件
 
@@ -632,7 +643,7 @@ GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
 
 `sudo pacman -S npm`
 
-npm源配置
+npm 源配置
 
 ```
 npm config set registry https://registry.npmmirror.com
