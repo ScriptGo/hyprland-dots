@@ -29,17 +29,17 @@ systemctl enable sshd
 
 登录系统后使用 nmcli 连接网络：
 
-显示附近的 Wi-Fi 网络  
-`nmcli dev wifi list`  
+显示附近的 Wi-Fi 网络
+`nmcli dev wifi list`
 
-连接无线网络  
-`nmcli dev wifi connect SSID password "网络密码"` 
+连接无线网络
+`nmcli dev wifi connect SSID password "网络密码"`
 
 
 
 **1.3 测试网络**
 
-通过 ping 命令测试网络连通性:  
+通过 ping 命令测试网络连通性:
 `ping -c 3 www.archlinux.org`
 
 稍等片刻，若能看到数据返回，说明已经联网。
@@ -64,10 +64,10 @@ systemctl enable sshd
 
 `EDITOR=vim visudo /etc/sudoers`
 
-找到  
+找到
 ```
 # Uncomment to allow members of group wheel to execute any command
-#%wheel ALL=(ALL:ALL) ALL` 
+#%wheel ALL=(ALL:ALL) ALL`
 ```
 
 去掉 `%wheel ` 前面的 #
@@ -114,7 +114,7 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 #Color
 #CHeckSpace
 #VerbosePkgLists
-#ParallelDownloads = 5 
+#ParallelDownloads = 5
 
 # 再加入这一行
 ILoveCandy
@@ -287,11 +287,11 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 **连接网络**
 
-显示附近的 Wi-Fi 网络  
-`nmcli dev wifi list`  
+显示附近的 Wi-Fi 网络
+`nmcli dev wifi list`
 
-连接无线网络  
-`nmcli dev wifi connect SSID password "网络密码"` 
+连接无线网络
+`nmcli dev wifi connect SSID password "网络密码"`
 
 
 
@@ -364,7 +364,7 @@ sudo pacman -Syyu`
 | -------- | -------------------- | ---- |
 | 软件管理 | sudo pacman -S pamac |      |
 | AUR 助手 | sudo pacman -S yay   |      |
-| 启动器     | yay -S rofi-lbonn-wayland-git |                 |
+| 启动器   | yay -S rofi-lbonn-wayland-git |                 |
 
 执行以下命令修改 aururl :
 
@@ -648,4 +648,3 @@ npm 源配置
 ```
 npm config set registry https://registry.npmmirror.com
 ```
-
