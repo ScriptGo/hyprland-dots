@@ -10,10 +10,10 @@ DefaultIM=rime
 
 [Groups/0/Items/0]
 # Name
-Name=Default
+Name=keyboard-us
 
 # Layout
-Layout=keyboard-us
+Layout=
 
 [Groups/0/Items/1]
 # Name
