@@ -13,13 +13,14 @@ DefaultIM=rime
 Name=Default
 
 # Layout
-Layout=
+Layout=keyboard-us
 
 [Groups/0/Items/1]
 # Name
 Name=rime
 
 # Layout
+Layout=
 
 [GroupOrder]
 0=Default
