@@ -1,5 +1,4 @@
 [Groups/0]
-
 # Group Name
 Name=Default
 
@@ -10,12 +9,17 @@ Default Layout=US
 DefaultIM=rime
 
 [Groups/0/Items/0]
+# Name
+Name=Default
 
+# Layout
+Layout=
+
+[Groups/0/Items/1]
 # Name
 Name=rime
 
 # Layout
-Layout=
 
 [GroupOrder]
 0=Default
