@@ -5,10 +5,10 @@
   "spacing": 5,
 
   "modules-left": ["clock", "clock#date"],
-  "modules-center": ["wlr/workspaces"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": ["bluetooth", "pulseaudio", "pulseaudio#microphone", "network", "battery", "custom/pacman", "custom/power"],
 
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "sort-by-number": true,
     "all-outputs": true,
     "format": "{icon}",
