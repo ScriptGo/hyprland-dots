@@ -73,8 +73,7 @@
     </test>
     <edit name="family" mode="prepend" binding="strong">
       <string>Noto Sans Mono CJK SC</string>
-      <string>Sarasa Mono SC</string>
-      <string>FiraCode Nerd Font Mono</string>
+      <string>Sarasa Term SC</string>
       <string>Noto Color Emoji</string>
     </edit>
   </match>
@@ -87,7 +86,7 @@
       <string>Noto Sans Mono CJK</string>
     </test>
     <edit name="family" mode="prepend" binding="strong">
-      <string>Sarasa Mono SC</string>
+      <string>Sarasa Term SC</string>
     </edit>
   </match>
 
