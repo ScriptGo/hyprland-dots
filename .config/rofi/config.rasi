@@ -35,7 +35,7 @@ configuration {
 /*    dpi: -1;*/
 
     /*---------- Misc setting ----------*/
-    terminal:             "alacritty";
+    terminal:             "kitty";
     sort:                 false;
     threads:              0;
     click-to-exit:        true;
