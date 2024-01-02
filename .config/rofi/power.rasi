@@ -21,11 +21,12 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
+    font: "FiraCode Nerd Font 14";
     transparency:         "real";
     location:             center;
     anchor:               center;
     fullscreen:           false;
-    width:                49%;
+    width:                30%;
     x-offset:             0px;
     y-offset:             0px;
 

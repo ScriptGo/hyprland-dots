@@ -198,7 +198,7 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    font:                 "FiraCode Nerd Font 12";
+    font:                 "FiraCode Nerd Font 14";
     transparency:         "real";
     location:             center;
     anchor:               center;

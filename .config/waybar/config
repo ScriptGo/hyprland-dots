@@ -1,169 +1,192 @@
 {
-  "id": "bar-0",
-  "layer": "top",
-  "position": "top",
-  "spacing": 5,
+    "id": "bar-0",
+    "layer": "top",       // waybar位于窗口上面
+    "position": "top",    // waybar的位置
+    // "height": 20,     // waybar的高度(自动调整)
+    // "width": 560,     // waybar的宽度(自动调整)
+    // "spacing": 5,     // 模块之间的间隙
+    
+    
+    "modules-left": ["clock", "clock#date"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["temperature", "pulseaudio", "pulseaudio#microphone", "bluetooth", "custom/pacman", "network", "battery", "custom/powermenu"],
 
-  "modules-left": ["clock", "clock#date"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["bluetooth", "pulseaudio", "pulseaudio#microphone", "network", "battery", "custom/pacman", "custom/power"],
+// 内置模块
 
-  "hyprland/workspaces": {
-    "sort-by-number": true,
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-       "1": "<span color='#00FF00'></span>",
-       "2": "<span color='#FFFFFF'></span>",
-       "3": "<span color='#FFFF00'></span>",
-       "4": "<span color='#00FFFF'></span>",
-       "5": "<span color='#A020F0'></span>",
-       "6": "<span color='#FF0000'></span>",
-       "default": "<span color='#0000FF'></span>"
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+           "1": "<span color='#00FF00'></span>",
+           "2": "<span color='#FFFFFF'></span>",
+           "3": "<span color='#FFFF00'></span>",
+           "4": "<span color='#00FFFF'></span>",
+           "5": "<span color='#A020F0'></span>",
+           "6": "<span color='#FF0000'></span>",
+           // "urgent": "",
+           // "active": "",
+           "default": "<span color='#0000FF'></span>",
+        },
+        "sort-by-number": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
     },
 
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "on-click": "activate"
-  },
-
-  "clock": {
-    "timezone": "Asia/Shanghai",
-    "locale": "zh_CN.UTF-8",
-    "format": "<span color='#b16286'>󰅐 </span>{:%H:%M}"
-  },
-
-   "clock#date": {
-    "format": "<span color='#458588'>󰸗 </span>{:%A %m/%d}"
-  },
-
-  "bluetooth": {
-    "format-on": "<span color='#458588'> </span>",
-    "format-off": "<span color='#cc241d'> </span>",
-    "format-connected": "<span color='#689d6a'> </span>{device_alias}",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-
-    "on-click": "blueman-manager",
-    "on-click-right": "kitty -e bluetoothctl"
-  },
-
-  "pulseaudio": {
-    "scroll-step": 5,
-    "format": "<span color='#d79921'>{icon}</span> {volume}%",
-    "format-muted": "<span color='#cc241d'>󰖁</span> Muted",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["󰕿", "󰖀", "󰕾", "󰕾"]
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": {
+          "headphone": "",
+          "hands-free": "",
+          "headset": "",
+          "phone": "",
+          "portable": "",
+          "car": "",
+          "default": ["󰕿", "󰖀", "󰕾", "󰕾"],
+        },
+        "scroll-step": 5,
+        "on-click": "pamixer --get-default-sink -t",
+        "on-click-right": "pavucontrol",
     },
 
-    "on-click": "pamixer --get-default-sink -t",
-    "on-click-right": "pavucontrol"
-  },
+    "pulseaudio#microphone": {
+        "scroll-step": 5,
+        "format": "{format_source}",
+        "format-source": "<span color='#689d6a'></span> {volume}%",
+        "format-source-muted": "<span color='#cc241d'></span> Muted",
 
-  "pulseaudio#microphone": {
-    "scroll-step": 5,
-    "format": "{format_source}",
-    "format-source": "<span color='#689d6a'></span> {volume}%",
-    "format-source-muted": "<span color='#cc241d'></span> Muted",
-
-    "on-scroll-up": "pamixer --default-source -i 5",
-    "on-scroll-down": "pamixer --default-source -d 5",
-    "on-click": "pamixer --default-source -t"
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "on-click": "pamixer --default-source -t",
     },
 
-  "network": {
-    "format-wifi": "<span color='#98971a'>{icon}</span> {essid}",
-    "format-icons": ["󰤬", "󰤤", "󰤧", "󰤪"],
-    "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
-    "format-disconnected": "<span color='#cc241d'>󰤮 </span>Disconnected",
-    "on-click": "~/.scripts/wifi-menu.sh"
-  },
+    "bluetooth": {
+        "format-on": "<span color='#458588'></span>",
+        "format-off": "<span color='#cc241d'></span>",
+        "format-connected": "<span color='#689d6a'></span>{device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
 
-  "cpu": {
-    "interval": 5,
-    "format": " {usage}%",
-    "tooltip": true,
-    "on-click": "kitty -e btop -p 1",
-  },
-
-  "memory": {
-    "interval": 5,
-    "format": " {}%",
-    "on-click": "kitty -e btop -p 2"
-  },
-
-  "temperature": {
-    "interval": 5,
-    "critical-threshold": 50,
-    "format": "{icon} {temperatureC}°C",
-    "format-icons": ["", "", "", ""],
-    "tooltip": false,
-    "on-click": "kitty -e btop -p 3",
- },
-
-  "backlight": {
-    // "device": "acpi_video1",
-    // "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-
-  "battery": {
-    "interval": 3,
-    "bat": "BAT0",
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
+        "on-click": "blueman-manager",
+        "on-click-right": "kitty -e bluetoothctl",
     },
 
-    "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "format-charging": "󱐋 {icon} {capacity}%",
-    "format-plugged": " {capacity}%",
-    "tooltip-format": "{power} W, {time}"
-  },
+    "network": {
 
-  "tray": {
-    "icon-size": 24,
-    "spacing": 10
-  },
+        "format-wifi": "{icon} ",
+        "format-icons": ["󰤬", "󰤤", "󰤧", "󰤪"],
+        "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
+        "format-disconnected": "󰤮  Disconnected",
+        "on-click": "~/.scripts/wifi-menu.sh",
+    },
 
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{icon} {name}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
 
-  "custom/logo": {
-    "format": "",
-    "tooltip": false,
-  },
+    "clock": {
+        "interval": 1,
+        "timezone": "Asia/Shanghai",
+        "locale": "zh_CN.UTF-8",
+        "format": "<span color='#b16286'>󰅐 </span>{:%H:%M:%S}",
+    },
 
-  "custom/pacman": {
-    "interval": 350,
-    "format": "<span color='#458588'></span> {}",
-    "exec": "checkupdates | wc -l",
-    "exex-if": "checkupdates",
-    "on-click": "kitty -e yay -Syyu && pkill -SIGRTMIN+8 waybar",
-    "on-click-right": "pamac-manager",
-    "signal": 8,
-    "tooltip": false
-  },
+    "clock#date": {
+        "format": "<span color='#458588'>󰸗 </span>{:%A %m/%d}",
+        "tooltip": "true",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#5e81ac'><b>{}</b></span>",
+                              "days":       "<span color='#88c0d0'><b>{}</b></span>",
+                              "weekdays":   "<span color='#d08770'><b> {} </b></span>",
+                              "today":      "<span color='#bf616a'><b><u>{}</u></b></span>"
+                              },
+                    },
+    },
 
-  "custom/power": {
-    "format": "⏻",
-    "tooltip": false,
-    "on-click": "~/.scripts/powermenu.sh"
-  }
+    "cpu": {
+        "interval": 5,
+        "format": "󰍛 {usage}%",
+        "format-alt": "󰍛 {avg_frequency} GHz",
+        "tooltip": true,
+        "on-click": "kitty -e btop -p 1",
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {}%",
+        "tooltip-format": " {used}/{total} GiB",
+        "on-click": "kitty -e btop -p 2"
+    },
+    "battery": {
+        "interval": 3,
+        "bat": "BAT0",
+        "format": "{icon} {capacity}% ",
+        "format-charging": " {icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-plugged": " {capacity}%",
+        "states": {
+          "good": 95,
+          "warning": 30,
+          "critical": 15,
+        },
+        "tooltip-format": "{power} W, {time}",
+    },
+
+
+    "backlight": {
+        // "device": "acpi_video1",
+        // "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+    },
+
+    "temperature": {
+        "interval": 5,
+        "critical-threshold": 50,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", ""],
+        "tooltip": false,
+        "on-click": "kitty -e btop -p 3",
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10,
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{icon} {name}",
+        "format-icons": {
+          "locked": "",
+          "unlocked": "",
+         },
+    },
+
+// 自定义模块
+
+    "custom/logo": {
+        "format": " {} ",
+        "tooltip": false,
+    },
+    "custom/pacman": {
+        "interval": 360,
+        "format": " {}",
+        "exec": "checkupdates | wc -l",
+        "exex-if": "checkupdates",
+        "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
+        "on-click-right": "pamac-manager",
+        "signal": 8,
+        "tooltip": false,
+    },
+    "custom/powermenu": {
+        "format": " {}",
+        "on-click": "wlogout -p xdg -b 2 -T 300 -B 300 -R 800 -L 800",
+        "tooltip": false,
+    },
 }
+
