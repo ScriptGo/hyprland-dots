@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 swww init
-
-while true; do
+while true;do
     DIR=~/Pictures/wallpaper
     PICS=($(ls ${DIR}))
     RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
