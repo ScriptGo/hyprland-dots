@@ -15,7 +15,6 @@ host=`hostname`
 
 # Options
 lock="  Lock"
-suspend="  Sleep"
 logout="  Logout"
 reboot="  Restart"
 shutdown="  Shutdown"
@@ -25,7 +24,7 @@ no=''
 # Rofi CMD
 rofi_cmd() {
     rofi -dmenu \
-        -p "  $USER@$host" \
+        -p "  $USER" \
         -theme ${theme}.rasi
 }
 
@@ -49,7 +48,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-    echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+    echo -e "$lock\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -60,10 +59,6 @@ run_cmd() {
             systemctl poweroff
         elif [[ $1 == '--reboot' ]]; then
             systemctl reboot
-        elif [[ $1 == '--suspend' ]]; then
-            mpc -q pause
-            amixer set Master mute
-            systemctl suspend
         elif [[ $1 == '--logout' ]]; then
             if [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
                 hyprctl dispatch exit
@@ -85,9 +80,6 @@ case ${chosen} in
         ;;
     $lock)
         swaylock
-        ;;
-    $suspend)
-        run_cmd --suspend
         ;;
     $logout)
         run_cmd --logout
