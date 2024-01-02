@@ -27,6 +27,9 @@ color=1a1b2680
 separator-color=00000000
 key-hl-color=7dcfff
 bs-hl-color=7dcfff
+caps-lock-key-hl-color=ffffffFF
+caps-lock-bs-hl-color=ffffffFF
+disable-caps-lock-text
 
 # text
 font="Inter"
