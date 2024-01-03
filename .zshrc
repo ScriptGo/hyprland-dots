@@ -120,3 +120,6 @@ eval "$(starship init zsh)"
 
 # neofetch
 neofetch
+
+# python venvs
+source ~/.venvs/bin/activate
