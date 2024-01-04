@@ -1,26 +1,58 @@
-# Terminal
-- SUPER + Return: Launch terminal
-- SUPER + SHIFT + Return: Launch a floating terminal
-- SUPER + ALT + Return: Launch terminal with custom size
-- SUPER + T: Launch terminal in full screen
+# 快速启动
 
-# Apps
-- SUPER + N: Open file manager
-- SUPER + SHIFT + E: Open text editor
-- SUPER + SHIFT + W: Open web browser
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+| + b | |
+| + c | |
+| + d | |
+| + e | |
+| + f | |
+| + g | |
+| + h | |
+| + | |
+| + | |
+| + | |
+| + | |
+| + | |
+| + | |
 
-# Rofi
-- SUPER + D: Launch Rofi launcher
-- SUPER + R: Launch Rofi runner
-- SUPER + M: Launch Rofi music
-- SUPER + X: Open Rofi power menu
-- SUPER + A: Take a screenshot with Rofi
+## 系统
 
-# Misc
-- SUPER + C: Open color picker
-- CTRL + ALT + L: Lock the screen
-- SUPER + SHIFT + B: Toggle between wallpapers
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
 
+## 窗口
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+## 工作区
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+### 切换工作区
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+### 将窗口移动到指定的工作区
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+### 连同窗口一并移动到指定的工作区
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
+### 滚动浏览现有工作区
+
+| 快捷键 | 描述 |
+| ------ | ---- |
+| + a | 打开终端 |
 # Scratchpad
 - SUPER + SHIFT + EQUAL: Move window to a special workspace
 - SUPER + EQUAL: Toggle special workspace
@@ -43,7 +75,6 @@
 # Screenshots
 - Print: Take a full screenshot
 - ALT + Print: Take a screenshot in 5 seconds
-- SHIFT + Print: Take a screenshot in 10 seconds
 - CTRL + Print: Take a screenshot of a window
 - SUPER + Print: Take a screenshot of an area
 
