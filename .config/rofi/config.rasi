@@ -203,16 +203,17 @@ window {
     location:             center;
     anchor:               center;
     fullscreen:           false;
-    width:                30%;
+    width:                560px;
     x-offset:             0;
     y-offset:             0;
 
     /* properties for all widgets */
     enabled:              true;
     margin:               0px;
-    padding:              10px;
-    border:               0px;
-    border-radius:        0px;
+    padding:              0px;
+    border:               2px solid;
+    border-radius:        15px;
+    border-color:         @fg;
     background-color:     @bg;
     cursor:               "default";
 }
@@ -221,25 +222,32 @@ window {
 mainbox {
     enabled:              true;
     spacing:              10px;
+    margin:               0px;
     padding:              25px;
     border:               0px;
     border-radius:        15px;
     background-color:     @bg;
-    children:             [ "inputbar", "message","listview", "mode-switcher" ];
+    children:             [ "inputbar", "message", "listview", "mode-switcher" ];
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:              true;
-    spacing:              0px;
+    spacing:              10px;
     margin:               0px;
-    padding:              5px;
+    padding:              10px;
     border:               1px;
     border-radius:        100%;
     border-color:         gray/25%;
     background-color:     @bg;
     text-color:           @normal-fg;
     children:             [ "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
 }
 
 textbox-prompt-colon {
@@ -370,32 +378,28 @@ mode-switcher{
 }
 
 button {
-    text-color:           @normal-fg;
     margin:               4px;
     padding:              4px;
     border:               0px;
     border-radius:        100%;
+    text-color:           @normal-fg;
     cursor:               pointer;
 }
 
 button.selected {
     background-color:     @selected-normal-bg;
     text-color:           @selected-normal-fg;
-    border:               2px;
-    border-radius:        8px;
 }
 
 /*****----- Message -----*****/
-error-message {
-    padding:              20px;
-    background-color:     @bg;
-    text-color:           @fg;
-}
-
 message {
+    enabled:              true;
+    margin:               0px;
     padding:              1px;
     border:               2px 0px 0px;
     border-color:         @bg;
+    background-color:     @bg;
+    text-color:           @fg;
 }
 
 textbox {
@@ -403,6 +407,16 @@ textbox {
     border-radius:        0px;
     background-color:     @bg;
     text-color:           @fg;
+    placeholder-color:    @fg;
+    highlight:            none;
     vertical-align:       0.5;
     horizontal-align:     0.0;
+    blink:                true;
+    markup:               true;
+}
+
+error-message {
+    padding:              20px;
+    background-color:     @bg;
+    text-color:           @fg;
 }

@@ -26,7 +26,7 @@ window {
     location:             center;
     anchor:               center;
     fullscreen:           false;
-    width:                49%;
+    width:                680px;
     x-offset:             0px;
     y-offset:             0px;
 
@@ -34,7 +34,7 @@ window {
     enabled:              true;
     margin:               0px;
     padding:              0px;
-    border:               0px solid;
+    border:               2px solid;
     border-radius:        25px;
     border-color:         @fg;
     background-color:     @bg;
