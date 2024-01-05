@@ -1,4 +1,4 @@
-# 快速启动
+## 快速启动
 
 | 快捷键 | 描述 |
 | ------ | ---- |
@@ -28,39 +28,48 @@
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 ## 工作区
 
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 ### 切换工作区
 
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 ### 将窗口移动到指定的工作区
 
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 ### 连同窗口一并移动到指定的工作区
 
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 ### 滚动浏览现有工作区
 
 | 快捷键 | 描述 |
 | ------ | ---- |
 | + a | 打开终端 |
+
 # Scratchpad
+
 - SUPER + SHIFT + EQUAL: Move window to a special workspace
 - SUPER + EQUAL: Toggle special workspace
 
 # Cheatsheet
+
 - SUPER + SHIFT + I: Open cheatsheet
 
 # Function keys
+
 - XF86MonBrightnessUp: Increase brightness
 - XF86MonBrightnessDown: Decrease brightness
 - XF86AudioRaiseVolume: Increase volume
@@ -73,12 +82,14 @@
 - XF86AudioStop: Stop playing current track
 
 # Screenshots
+
 - Print: Take a full screenshot
 - ALT + Print: Take a screenshot in 5 seconds
 - CTRL + Print: Take a screenshot of a window
 - SUPER + Print: Take a screenshot of an area
 
 # Hyprland
+
 - SUPER + Q: Close active window
 - CTRL + ALT + Delete: Log out/exit
 - SUPER + F: Toggle fullscreen mode
@@ -112,5 +123,6 @@
 - SUPER + SHIFT + O: Toggle window opacity
 
 # Mouse Buttons
+
 - SUPER + left-click: Move window
 - SUPER + right-click: Resize window
