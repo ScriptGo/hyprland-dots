@@ -334,16 +334,13 @@ sudo pacman -Syyu`
 
 | Type       | Package(s)                         | 备注                       |
 | ---------- | ---------------------------------- | -------------------------- |
-| waybar     | sudo pacman -S waybar-hyprland-git |                            |
+| waybar     | sudo pacman -S waybar-hyprland |                            |
 | 通知程序   | sudo pacman -S dunst               |                            |
 | 认证代理   | sudo pacman -S polkit-gnome        |                            |
 | 终端       | sudo pacman -S kitty          |                 |
 | 锁屏       | sudo pacman -S swaylock-effects    |                            |
 | 空闲管理   | sudo pacman -S swayidle            |                            |
-| 登录管理器 | sudo pacman -S sddm-git            | sudo systemctl enable sddm |
-
-**备注列的内容需要在软件安装完成后执行**
-
+| 登录管理器 | sudo pacman -S sddm            | sudo systemctl enable sddm |
 
 
 ## 文件管理
@@ -365,13 +362,6 @@ sudo pacman -Syyu`
 | 软件管理 | sudo pacman -S pamac |      |
 | AUR 助手 | sudo pacman -S yay   |      |
 | 启动器   | yay -S rofi-lbonn-wayland-git |                 |
-
-执行以下命令修改 aururl :
-
- `yay --aururl "https://aur.archlinux.org" --save` # 请换成国内的源
-
-配置文件位于 ~/.config/yay/config.json
-
 
 
 ## 字体
