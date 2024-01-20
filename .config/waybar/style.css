@@ -1,15 +1,15 @@
 * {
-    border: none;
-    font-family: "Sarasa Term SC", "Iosevka Nerd Font";
-    font-size: 18px;
-    min-height: 0;
-    font-style: normal;
-    font-weight: normal;
+  border: none;
+  font-family: "Sarasa Term SC", "Iosevka Nerd Font";
+  font-size: 18px;
+  min-height: 0;
+  font-style: normal;
+  font-weight: normal;
 }
 
 window#waybar {
-    background: transparent;
-    color: #cdd6f4
+  background: transparent;
+  color: #cdd6f4
 }
 
 button#label {
@@ -43,18 +43,19 @@ tooltip#label {
 }
 */
 
-
-
-#clock,
 #workspaces,
-#pulseaudio,
-#bluetooth,
-#network,
 #battery,
+#bluetooth,
+#clock,
+#network,
+#pulseaudio,
+#privacy,
 
 #cpu,
 #memory,
 #temperature,
+#tray,
+
 #custom-logo,
 #custom-launcher,
 #custom-pacman,
@@ -72,17 +73,6 @@ tooltip#label {
 }
 */
 
-#clock {
-    background-color: #2e3440;
-    color: #cdd6f4;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-
 #workspaces {
   background-color: transparent;
 }
@@ -99,74 +89,144 @@ tooltip#label {
   border: solid 2px #FE8019;
 }
 
-#workspaces button.active:hover {
-  background-color: #689d6a;
-}
-
-#pulseaudio {
-    background: #2e3440;
-    color: #5e81ac;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-
 #bluetooth {
-    background: #2e3440;
-    color: #5e81ac;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-
-#network {
-    background-color: #2e3440; 
-    color: #B48EAD;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+  background: #2e3440;
+  color: #5e81ac;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
 }
 
 #battery {
-    background-color: #2e3440; 
-    color: #ebdbb2;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+  background-color: #2e3440;
+  color: #ebdbb2;
+  border-radius: 10px;
+  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
 }
 
+#battery.warning {
+  background: orange;
+}
+
+#battery.critical {
+  background: red;
+}
+
+#battery.plugged {
+  background: green;
+}
+
+#battery.charging {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slide {
+  0% {
+    background: red;
+  }
+
+  25% {
+    background: yellow;
+  }
+
+  50% {
+    background: blue;
+  }
+
+  100% {
+    background: green;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-name: blink;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}
+
+#clock {
+  background-color: #2e3440;
+  color: #cdd6f4;
+  border-radius: 10px;
+  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#network {
+  background-color: #2e3440;
+  color: #B48EAD;
+  border-radius: 10px;
+  margin: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#pulseaudio {
+  background: #2e3440;
+  color: #5e81ac;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
+}
+
+#privacy {}
+
+#privacy-item {}
+
+#privacy-item.screenshare {}
+
+#privacy-item.audio-in {}
+
+#privacy-item.audio-out {}
+
 #cpu {
-    background-color: #2e3440;
-    color: #bf616a;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+  background-color: #2e3440;
+  color: #bf616a;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
 }
 
 #memory {
-    background-color: #2e3440;
-    color: #88c0d0;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
+  background-color: #2e3440;
+  color: #88c0d0;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
 }
 
 #temperature {
@@ -192,47 +252,46 @@ tooltip#label {
 }
 
 #tray {
-    background: #2e3440;
-    margin: 5px 5px 5px 5px;
-    border-radius: 10px;
-    padding: 0px 12px;
+  background: #2e3440;
+  margin: 5px 5px 5px 5px;
+  border-radius: 10px;
+  padding: 0px 12px;
 }
 
 #custom-logo {
-    background-color: #2e3440;
-    color: #cdd6f4;
-    border-radius: 0px 24px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    padding: 0 20px 0 13px;
-    font-size: 20px;
+  background-color: #2e3440;
+  color: #cdd6f4;
+  border-radius: 0px 24px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0 20px 0 13px;
+  font-size: 20px;
 }
 
 #custom-launcher button:hover {
-    background-color: #FB4934;
-    color: transparent;
-    border-radius: 10px;
-    margin-right: -5px;
-    margin-left: 10px;
+  background-color: #FB4934;
+  color: transparent;
+  border-radius: 10px;
+  margin-right: -5px;
+  margin-left: 10px;
 }
 
-#custom-pacman{
-    background-color: #2e3440;
-    color: #a3be8c;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;     
+#custom-pacman {
+  background-color: #2e3440;
+  color: #a3be8c;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 10px 0px 10px;
+  font-weight: bold;
 }
 
 #custom-powermenu {
-    background-color: #2e3440;
-    color: #BF616A;
-    border-radius: 10px;
-    margin: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 0px 0px 0px 10px;
+  background-color: #2e3440;
+  color: #BF616A;
+  border-radius: 10px;
+  margin: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 0px 0px 10px;
 }
-
