@@ -119,7 +119,7 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 eval "$(starship init zsh)"
 
 # neofetch
-neofetch
+# neofetch
 
 # python venvs
-source ~/.venvs/bin/activate
+# source ~/.venvs/bin/activate
