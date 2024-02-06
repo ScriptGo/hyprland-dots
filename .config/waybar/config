@@ -207,7 +207,6 @@
         "exec": "checkupdates | wc -l",
         "exex-if": "checkupdates",
         "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
-        "on-click-right": "pamac-manager",
         "signal": 8,
         "tooltip": false
     },
