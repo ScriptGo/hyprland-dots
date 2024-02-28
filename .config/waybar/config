@@ -29,8 +29,6 @@
             "4": "<span color='#00FFFF'></span>",
             "5": "<span color='#A020F0'></span>",
             "6": "<span color='#FF0000'></span>",
-            // "urgent": "",
-            // "active": "",
             "default": "<span color='#0000FF'></span>"
         },
         "sort-by-number": true,
@@ -128,7 +126,7 @@
         "interval": 5,
         "format": "󰍛 {usage}%",
         "format-alt": "󰍛 {avg_frequency} GHz",
-        "tooltip": true
+        "tooltip": false
     },
     "memory": {
         "interval": 5,
@@ -157,8 +155,6 @@
         "tooltip-format": "{power} W, {time}"
     },
     "backlight": {
-        // "device": "acpi_video1",
-        // "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": [
             "",
