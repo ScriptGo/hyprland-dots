@@ -86,7 +86,6 @@
 | 替换 find | sudo pacman -S fd |     |
 | 替换 grep | sudo pacman -S ripgrep |     |
 | 替换 cat | sudo pacman -S bat |     |
-| 流程图 | sudo pacman -S graphviz |     |
 | 简化版 man 手册 | sudo pacman -S tldr | `第一次使用tldr之前，需要更新一下缓存 tldr --update` |
 | 模糊查找 | sudo pacman -S fzf |     |
 | shellcheck | sudo pacman -S shellcheck | |
