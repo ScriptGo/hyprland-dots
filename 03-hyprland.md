@@ -62,8 +62,7 @@
 | --- | ------- | --- |
 | AUR 助手 | sudo pacman -S yay |  |
 | 启动器 | yay -S rofi-lbonn-wayland |     |
-| 编辑器 | sudo pacman -S neovide | sudo pacman -s python-pynvim |
-| 编辑器 | yay -S visual-studio-code-bin neovide | |
+| 编辑器 | yay -S visual-studio-code-bin neovide | sudo pacman -s python-pynvim |
 | 磁盘管理 | sudo pacman -S gparted |     |
 | 启动盘制作 | sudo pacman -S ventoy |     |
 | 防火墙 | sudo pacman -S gufw | sudo ufw enable |
