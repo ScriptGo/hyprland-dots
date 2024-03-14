@@ -4,18 +4,16 @@
     "position": "top",
     "modules-left": [
         "clock",
-        "clock#date"
+        "clock#date",
+        "custom/pacman"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
+        "custom/cava",
         "pulseaudio",
-        "privacy",
         "bluetooth",
-        "custom/pacman",
         "network",
         "battery",
         "custom/powermenu"
@@ -61,12 +59,24 @@
     "cpu": {
         "interval": 5,
         "format": "󰍛 {usage}%",
+        "format-alt": "󰍛 {avg_frequency} GHz",
         "tooltip": false
     },
     "memory": {
         "interval": 5,
         "format": " {}%",
         "tooltip-format": " {used} GiB / {total} GiB"
+    },
+    "temperature": {
+        "interval": 1,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -79,37 +89,13 @@
             "portable": "",
             "car": "",
             "default": [
-                "󰕿",
-                "󰖀",
-                "󰕾",
-                "󰕾"
+                "",
+                ""
             ]
         },
         "scroll-step": 5,
         "on-click": "pamixer --get-default-sink -t",
         "on-click-right": "pavucontrol"
-    },
-    "privacy": {
-        "icon-spacing": 4,
-        "icon-size": 18,
-        "transition-duration": 250,
-        "modules": [
-            {
-                "type": "screenshare",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-out",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            },
-            {
-                "type": "audio-in",
-                "tooltip": true,
-                "tooltip-icon-size": 24
-            }
-        ]
     },
     "bluetooth": {
         "format-on": "<span color='#458588'></span>",
@@ -124,13 +110,13 @@
         "format-ethernet": " {ifname}",
         "tooltip-format-ethernet": " {ifname} via {gwaddr}",
         "format-wifi": "{icon} ",
+        "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
         "format-icons": [
             "󰤬",
             "󰤤",
             "󰤧",
             "󰤪"
         ],
-        "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
         "format-disconnected": "󰤮  Disconnected",
         "on-click": "~/.scripts/wifi-menu.sh"
     },
@@ -154,32 +140,6 @@
         },
         "tooltip-format": "{power} W, {time}"
     },
-    "backlight": {
-        "format": "{icon} {percent}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "temperature": {
-        "interval": 5,
-        "critical-threshold": 50,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": [
-            "",
-            "",
-            "",
-            ""
-        ],
-        "tooltip": false
-    },
     "tray": {
         "icon-size": 18,
         "spacing": 10
@@ -193,6 +153,11 @@
             "unlocked": ""
         }
     },
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.scripts/cava.sh",
+        "tooltip": false
+    },
     "custom/logo": {
         "format": " {} ",
         "tooltip": false
@@ -203,8 +168,7 @@
         "exec": "checkupdates | wc -l",
         "exex-if": "checkupdates",
         "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
-        "signal": 8,
-        "tooltip": false
+        "signal": 8
     },
     "custom/powermenu": {
         "format": " {}",
