@@ -67,7 +67,7 @@ tooltip#label {
 
 #clock {
     background-color: #2e3440;
-    color: #cdd6f4;
+    color: #d8dee9;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -121,7 +121,7 @@ tooltip#label {
 
 #pulseaudio {
     background: #2e3440;
-    color: #5e81ac;
+    color: #d8dee9;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -163,8 +163,8 @@ tooltip#label {
 }
 
 #backlight {
-    background-color: #98bbad;
-    color: #282828;
+    background-color: #2e3440;
+    color: #d8dee9;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -175,7 +175,7 @@ tooltip#label {
 
 #battery {
     background-color: #2e3440;
-    color: #ebdbb2;
+    color: #d8dee9;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -273,7 +273,7 @@ tooltip#label {
 
 #custom-pacman {
     background-color: #2e3440;
-    color: #a3be8c;
+    color: #d8dee9;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;

@@ -66,8 +66,8 @@ tooltip label {
 }
 
 #clock {
-    background-color: #98971a;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -77,8 +77,8 @@ tooltip label {
 }
 
 #cpu {
-    background-color: #689d6a;
-    color: #282828;
+    background-color: #282828;
+    color: #689d6a;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -88,8 +88,8 @@ tooltip label {
 }
 
 #memory {
-    background-color: #c8779b;
-    color: #282828;
+    background-color: #282828;
+    color: #c8779b;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -99,8 +99,8 @@ tooltip label {
 }
 
 #temperature {
-    background-color: #f0932b;
-    color: #282828;
+    background-color: #282828;
+    color: #f0932b;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
@@ -110,8 +110,8 @@ tooltip label {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
-    color: #282828;
+    background-color: #282828;
+    color: #eb4d4b;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -121,8 +121,8 @@ tooltip label {
 }
 
 #pulseaudio {
-    background-color: #f2b13c;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -132,12 +132,13 @@ tooltip label {
 }
 
 #pulseaudio.muted {
-    background-color: #eb4d4b;
-    color: #282828;
+    background-color: #282828;
+    color: #eb4d4b;
 }
 
 #bluetooth {
     background: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -147,8 +148,8 @@ tooltip label {
 }
 
 #network {
-    background-color: #689d6a;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -158,13 +159,13 @@ tooltip label {
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
-    color: #282828;
+    background-color: #282828;
+    color: #f53c3c;
 }
 
 #backlight {
-    background-color: #98bbad;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border: none;
     border-radius: 10px;
     margin: 5px;
@@ -175,8 +176,8 @@ tooltip label {
 }
 
 #battery {
-    background-color: #5d9da0;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -239,8 +240,8 @@ tooltip label {
 }
 
 #tray {
-    background-color: #ec7024;
-    color: #282828;
+    background-color: #282828;
+    color: #ec7024;
     border: none;
     margin: 5px 5px 5px 5px;
     border-radius: 10px;
@@ -248,7 +249,7 @@ tooltip label {
 }
 
 #custom-cava {
-    background-color: #98bbad;
+    background-color: #282828;
     color: #BF616A;
     border-radius: 10px;
     margin: 5px;
@@ -258,7 +259,7 @@ tooltip label {
 }
 
 #custom-logo {
-    background-color: #2e3440;
+    background-color: #282828;
     color: #cdd6f4;
     border-radius: 0px 24px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -275,8 +276,8 @@ tooltip label {
 }
 
 #custom-pacman {
-    background-color: #5d9da0;
-    color: #282828;
+    background-color: #282828;
+    color: #ebdbb2;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
