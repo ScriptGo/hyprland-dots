@@ -89,6 +89,7 @@
             "portable": "",
             "car": "",
             "default": [
+                "",
                 "",
                 ""
             ]
@@ -119,6 +120,20 @@
         ],
         "format-disconnected": "󰤮  Disconnected",
         "on-click": "~/.scripts/wifi-menu.sh"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery": {
         "interval": 3,
