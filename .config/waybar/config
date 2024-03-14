@@ -15,6 +15,7 @@
         "pulseaudio",
         "bluetooth",
         "network",
+        "backlight",
         "battery",
         "custom/powermenu"
     ],
@@ -23,7 +24,7 @@
         "format-icons": {
             "1": "<span color='#00FF00'></span>",
             "2": "<span color='#FFFFFF'></span>",
-            "3": "<span color='#FFFF00'></span>",
+            "3": "<span color='#FFFF00'></span>",
             "4": "<span color='#00FFFF'></span>",
             "5": "<span color='#A020F0'></span>",
             "6": "<span color='#FF0000'></span>",
@@ -37,10 +38,10 @@
         "interval": 1,
         "timezone": "Asia/Shanghai",
         "locale": "zh_CN.UTF-8",
-        "format": "<span color='#b16286'>󰅐 </span>{:%H:%M:%S}"
+        "format": "<span color='#b16286'> </span>{:%H:%M:%S}"
     },
     "clock#date": {
-        "format": "<span color='#458588'>󰸗 </span>{:%A %m/%d}",
+        "format": "<span color='#458588'> </span>{:%A %m/%d}",
         "tooltip": "true",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -58,14 +59,13 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "󰍛 {usage}%",
-        "format-alt": "󰍛 {avg_frequency} GHz",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
         "interval": 5,
-        "format": " {}%",
-        "tooltip-format": " {used} GiB / {total} GiB"
+        "format": " {}%",
+        "tooltip-format": " {used} GiB / {total} GiB"
     },
     "temperature": {
         "interval": 1,
@@ -80,7 +80,7 @@
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": "󰖁 Muted",
+        "format-muted": "婢 Muted",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -99,17 +99,17 @@
         "on-click-right": "pavucontrol"
     },
     "bluetooth": {
-        "format-on": "<span color='#458588'></span>",
-        "format-off": "<span color='#cc241d'></span>",
-        "format-connected": "<span color='#689d6a'></span>{device_alias}",
+        "format-on": "<span color='#458588'> </span>",
+        "format-off": "<span color='#cc241d'> </span>",
+        "format-connected": "<span color='#00FF00'> </span>{device_alias}",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "blueman-manager",
         "on-click-right": "kitty -e bluetoothctl"
     },
     "network": {
-        "format-ethernet": " {ifname}",
-        "tooltip-format-ethernet": " {ifname} via {gwaddr}",
+        "format-ethernet": " {ifname}",
+        "tooltip-format-ethernet": " {ifname} via {gwaddr}",
         "format-wifi": "{icon} ",
         "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
         "format-icons": [
@@ -118,21 +118,18 @@
             "󰤧",
             "󰤪"
         ],
-        "format-disconnected": "󰤮  Disconnected",
+        "format-disconnected": " Disconnected",
         "on-click": "~/.scripts/wifi-menu.sh"
     },
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
         ]
     },
     "battery": {
@@ -149,7 +146,7 @@
         ],
         "format-plugged": " {capacity}%",
         "states": {
-            "good": 95,
+            "good": 90,
             "warning": 30,
             "critical": 15
         },
@@ -174,7 +171,7 @@
         "tooltip": false
     },
     "custom/logo": {
-        "format": " {} ",
+        "format": " {} ",
         "tooltip": false
     },
     "custom/pacman": {

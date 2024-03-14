@@ -8,8 +8,8 @@
 }
 
 window#waybar {
-    background: transparent;
-    color: #cdd6f4
+    background-color: transparent;
+    color: #ebdbb2;
 }
 
 button#label {
@@ -17,31 +17,18 @@ button#label {
 }
 
 tooltip {
-    background: #282828;
+    background-color: #282828;
     color: #ebdbb2;
     border-radius: 10px;
     border: solid 1px #FE8019;
 }
 
-tooltip#label {
+tooltip label {
     background: #282828;
     color: #ebdbb2;
     text-shadow: none;
     border: none;
 }
-
-/*
-#window {
-    background: #2e3440;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-weight: normal;
-    font-style: normal;
-}
-*/
 
 #workspaces,
 #clock,
@@ -53,26 +40,14 @@ tooltip#label {
 #bluetooth,
 
 #network,
+#backlight,
 #battery,
 #tray,
 
 #custom-cava,
 #custom-logo,
-#custom-launcher,
 #custom-pacman,
 #custom-powermenu,
-
-/*
-#workspaces {
-    background-color: #2e3440;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-*/
 
 #workspaces {
     background-color: transparent;
@@ -91,8 +66,8 @@ tooltip#label {
 }
 
 #clock {
-    background-color: #2e3440;
-    color: #cdd6f4;
+    background-color: #98971a;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -102,30 +77,30 @@ tooltip#label {
 }
 
 #cpu {
-    background-color: #2e3440;
-    color: #bf616a;
+    background-color: #689d6a;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
 #memory {
-    background-color: #2e3440;
-    color: #88c0d0;
+    background-color: #c8779b;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
 #temperature {
-    background-color: #2e3440;
-    color: #ebcb8b;
+    background-color: #f0932b;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
@@ -135,41 +110,62 @@ tooltip#label {
 }
 
 #temperature.critical {
-    background-color: #a3be8c;
-    color: #282738;
+    background-color: #eb4d4b;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
 #pulseaudio {
-    background: #2e3440;
-    color: #5e81ac;
+    background-color: #f2b13c;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
+#pulseaudio.muted {
+    background-color: #eb4d4b;
+    color: #282828;
+}
+
 #bluetooth {
-    background: #2e3440;
-    color: #5e81ac;
+    background: #282828;
     border-radius: 10px;
     margin: 5px;
-    margin-left: 5px;
     margin-right: 5px;
+    margin-left: 5px;
     padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
 #network {
-    background-color: #2e3440;
-    color: #B48EAD;
+    background-color: #689d6a;
+    color: #282828;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    background-color: #f53c3c;
+    color: #282828;
+}
+
+#backlight {
+    background-color: #98bbad;
+    color: #282828;
+    border: none;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -179,13 +175,13 @@ tooltip#label {
 }
 
 #battery {
-    background-color: #2e3440;
-    color: #ebdbb2;
+    background-color: #5d9da0;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
     margin-left: 5px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 5px 0px 10px;
     font-weight: bold;
 }
 
@@ -243,14 +239,16 @@ tooltip#label {
 }
 
 #tray {
-    background: #2e3440;
+    background-color: #ec7024;
+    color: #282828;
+    border: none;
     margin: 5px 5px 5px 5px;
     border-radius: 10px;
     padding: 0px 12px;
 }
 
 #custom-cava {
-    background-color: #2e3440;
+    background-color: #98bbad;
     color: #BF616A;
     border-radius: 10px;
     margin: 5px;
@@ -277,8 +275,8 @@ tooltip#label {
 }
 
 #custom-pacman {
-    background-color: #2e3440;
-    color: #a3be8c;
+    background-color: #5d9da0;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
@@ -288,8 +286,8 @@ tooltip#label {
 }
 
 #custom-powermenu {
-    background-color: #2e3440;
-    color: #BF616A;
+    background-color: #e23c2c;
+    color: #282828;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
