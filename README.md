@@ -94,9 +94,3 @@ Aurora
 |暗绿色|#308014|     |       |     |      |
 |海绿色|#2E8B57|     |       |     |      |
 |嫩绿色|#00FF7F|     |       |     |      |
-
-**参考配置**
-
-<https://github.com/yurihikari/garuda-sway-config>
-<https://gitlab.com/craigccfl/hyprland-rice>
-<https://github.com/bluebyt/Wayfire-dots>

@@ -174,6 +174,17 @@ tooltip label {
     font-weight: bold;
 }
 
+#backlight {
+    background-color: #282828;
+    color: #ebdbb2;
+    border-radius: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+}
+
 #battery {
     background-color: #282828;
     color: #ebdbb2;
@@ -181,7 +192,7 @@ tooltip label {
     margin: 5px;
     margin-right: 5px;
     margin-left: 5px;
-    padding: 0px 5px 0px 10px;
+    padding: 0px 10px 0px 10px;
     font-weight: bold;
 }
 
@@ -195,47 +206,6 @@ tooltip label {
 
 #battery.plugged {
     background: green;
-}
-
-#battery.charging {
-    animation-name: slide;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes slide {
-    0% {
-        background: red;
-    }
-
-    25% {
-        background: yellow;
-    }
-
-    50% {
-        background: blue;
-    }
-
-    100% {
-        background: green;
-    }
-}
-
-#battery.critical:not(.charging) {
-    animation-name: blink;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes blink {
-    to {
-        background-color: #BF616A;
-        color: #B5E8E0;
-    }
 }
 
 #tray {
