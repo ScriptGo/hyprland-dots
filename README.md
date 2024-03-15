@@ -1,7 +1,5 @@
 # 从零开始配置HyprLand
 
-## gruvbox
-
 ## nord
 
 Polar
@@ -35,6 +33,27 @@ Aurora
 | nord-13 | #EBCB8B |
 | nord-14 | #A3BE8C |
 | nord-15 | #B48EAD |
+
+## kitty
+
+| 部件 | Nord | Gruvbox |
+| --- | ---- | ---- |
+| black | #464e61 | #323536 |
+| black-bright | #515a70 | #444748 |
+| red | #bf616a | #cc241d |
+| red-bright | #d86e78 | #fb4934 |
+| green | #a3be8c | #98971a |
+| green-bright | #b7d59d | #b8bb26 |
+| yellow | #ebcb8b | #d79921 |
+| bright | #fddb96 | #fabd2f |
+| blue | #8fbcbb | #458588 |
+| blue-bright | #9ed0cf | #83a598 |
+| magenta | #b48ead | #b16286 |
+| magenta-bright | #cea2c6 | #d3869b |
+| cyan | #8fbcbb | #689d6a |
+| cyan-bright | #9ed0cf | #8ec07c |
+| white | #e5e9f0 | #ebdbb2 |
+| white-bright | #eff3fa | #fbf1c7 |
 
 ## 其他
 
@@ -75,3 +94,9 @@ Aurora
 |暗绿色|#308014|     |       |     |      |
 |海绿色|#2E8B57|     |       |     |      |
 |嫩绿色|#00FF7F|     |       |     |      |
+
+**参考配置**
+
+<https://github.com/yurihikari/garuda-sway-config>
+<https://gitlab.com/craigccfl/hyprland-rice>
+<https://github.com/bluebyt/Wayfire-dots>
