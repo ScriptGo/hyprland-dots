@@ -42,13 +42,9 @@
     },
     "clock#date": {
         "format": "<span color='#458588'> </span>{:%A %m/%d}",
-        "tooltip": "true",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "on-click-right": "mode",
             "format": {
                 "months": "<span color='#5e81ac'><b>{}</b></span>",
                 "days": "<span color='#88c0d0'><b>{}</b></span>",
@@ -181,7 +177,8 @@
         "exec": "checkupdates | wc -l",
         "exex-if": "checkupdates",
         "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
-        "signal": 8
+        "signal": 8,
+        "tooltip": false
     },
     "custom/powermenu": {
         "format": " {}",
