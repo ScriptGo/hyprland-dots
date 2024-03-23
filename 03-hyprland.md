@@ -1,8 +1,8 @@
-# 桌面环境
+# HyprlandWM
 
-我使用的是窗口管理器，不是完整的桌面环境！
+## 安装
 
-## Hyprland
+### hyprland
 
 1.更新系统
 
@@ -34,7 +34,7 @@
 | 终端 | sudo pacman -S kitty |     |
 | 登录管理器 | sudo pacman -S sddm | sudo systemctl enable sddm |
 
-## 文件管理
+### 文件管理
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
@@ -42,7 +42,7 @@
 | PDF阅读器 | sudo pacman -S zathura zathura-pdf-poppler |     |
 | 解压缩 | sudo pacman -S file-roller p7zip unrar |     |
 
-## 字体
+### 字体
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
@@ -56,7 +56,7 @@
 
 `fc-cache -f -v`
 
-## Misc
+### Misc
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
@@ -74,7 +74,7 @@
 | 剪贴板 | sudo pacman -S cliphist | |
 | 截图 | sudo pacman -S grim slurp | |
 
-## CLI
+### CLI
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
@@ -90,7 +90,7 @@
 | shellcheck | sudo pacman -S shellcheck | |
 | 其他  | sudo pacman -S jq zenity tree lolcat |     |
 
-## 多媒体
+### 多媒体
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
@@ -103,7 +103,7 @@
 | 音频可视化 | sudo pacman -S cava | |
 | 录屏 | sudo pacman -S obs-studio |     |
 
-## 其他
+### Other
 
 1.java
 
@@ -122,3 +122,84 @@ npm config set registry https://registry.npmmirror.com
 3.red
 
 `sudo pacman -S lib32-gtk3`
+
+## 配置
+
+### zsh
+
+1.常用插件
+
+| 插件  |     |
+| --- | --- |
+| 自动建议 | sudo pacman -S zsh-autosuggestions |
+| 语法高亮 | sudo pacman -S zsh-syntax-highlighting |
+| 历史命令搜索 | sudo pacman -S zsh-history-substring-search |
+| 快速跳转 | yay -S z.lua |
+
+2.提示符美化
+
+`sudo pacman -S starship`
+
+### mpd
+
+```bash
+systemctl start mpd.service --user  # 启动 mpd 服务
+systemctl enable mpd.service --user # 开机自启
+```
+
+### 缓存
+
+自动清理不使用的软件包缓存
+
+```bash
+sudo pacman -S pacman-contrib
+sudo systemctl enable paccache.timer
+```
+
+### SSD
+
+TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
+
+`sudo systemctl enable fstrim.timer`
+
+### TLP
+
+电源管理
+
+`sudo pacman -S tlp`
+
+启动服务
+
+`sudo systemctl enable tlp`
+
+### 其他
+
+强制应用使用 `wayland` 环境
+
+1.基于 `electron` 的程序
+
+编辑 ==~/.config/electron-flags.conf==
+
+添加以下内容
+
+```bash
+--enable-features=WaylandWindowDecorations
+--ozone-platform-hint=auto
+--gtk-version=4
+```
+
+2.chrome
+
+编辑 ~/.config/chrome-flags.conf
+
+添加以下内容
+
+```bash
+--enable-features=UseOzonePlatform
+--ozone-platform=wayland
+--gtk-version=4
+```
+
+打开 chrome, 输入 `chrome://flags` 然后搜索 `ozone` , 选择 `Wayland` 即可
+
+使用 `hyprctl clients` 查看程序是否在 `xwayland` 中运行
