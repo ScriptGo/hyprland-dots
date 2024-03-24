@@ -127,7 +127,13 @@ npm config set registry https://registry.npmmirror.com
 
 ### zsh
 
-1.常用插件
+1.切换shell
+
+`chsh -s $(which zsh)`
+
+注销或重启后生效
+
+2.常用插件
 
 | 插件  |     |
 | --- | --- |
@@ -136,7 +142,7 @@ npm config set registry https://registry.npmmirror.com
 | 历史命令搜索 | sudo pacman -S zsh-history-substring-search |
 | 快速跳转 | yay -S z.lua |
 
-2.提示符美化
+3.提示符美化
 
 `sudo pacman -S starship`
 
