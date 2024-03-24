@@ -133,14 +133,14 @@ alias cp="cp -i"
 
 alias szr="source ~/.zshrc"
 
-# 在命令行直接输入以下后缀的文件，会在 nvim 中打开
+# 在命令行直接输入带有以下后缀的文件，会在 nvim 中打开
 alias -s html='nvim'
 alias -s css='nvim'
 alias -s py='nvim'
 alias -s red='nvim'
 alias -s sh='nvm'
 
-# 在命令行直接输入以下后缀的文件，会自动解压打开
+# 在命令行直接输入带有以下后缀的文件，会自动解压
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
