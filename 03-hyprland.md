@@ -33,6 +33,8 @@
 | 认证 | sudo pacman -S polkit-gnome |     |
 | 终端 | sudo pacman -S kitty |     |
 | 登录管理器 | sudo pacman -S sddm | sudo systemctl enable sddm |
+| AUR 助手 | sudo pacman -S yay |  |
+| 启动器 | yay -S rofi-lbonn-wayland |     |
 
 ### 文件管理
 
@@ -60,8 +62,6 @@
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
-| AUR 助手 | sudo pacman -S yay |  |
-| 启动器 | yay -S rofi-lbonn-wayland |     |
 | 编辑器 | yay -S visual-studio-code-bin | sudo pacman -s python-pynvim |
 | 磁盘管理 | sudo pacman -S gparted |     |
 | 启动盘制作 | sudo pacman -S ventoy |     |
@@ -172,15 +172,16 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 
 电源管理
 
-`sudo pacman -S tlp`
-
-启动服务
-
-`sudo systemctl enable tlp`
+```bash
+sudo pacman -S tlp
+sudo systemctl enable tlp
+```
 
 ### 其他
 
 强制应用使用 `wayland` 环境
+
+使用 `hyprctl clients` 查看程序是否在 `xwayland` 中运行
 
 1.基于 `electron` 的程序
 
@@ -208,4 +209,3 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 
 打开 chrome, 输入 `chrome://flags` 然后搜索 `ozone` , 选择 `Wayland` 即可
 
-使用 `hyprctl clients` 查看程序是否在 `xwayland` 中运行
