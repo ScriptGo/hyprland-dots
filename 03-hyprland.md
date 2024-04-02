@@ -34,7 +34,6 @@
 | 终端 | sudo pacman -S kitty |     |
 | 登录管理器 | sudo pacman -S sddm | sudo systemctl enable sddm |
 | AUR 助手 | sudo pacman -S yay |  |
-| 启动器 | yay -S rofi-lbonn-wayland |     |
 
 ### 文件管理
 
@@ -52,16 +51,12 @@
 | 英文字体 | sudo pacman -S ttf-fira-code ttf-jetbrains-mono | |
 | Nerd | sudo pacman -S ttf-firacode-nerd ttf-jetbrains-mono-nerd | |
 | 图标 | sudo pacman -S awesome-terminal-fonts otf-font-awesome | |
-| material icons | yay -S ttf-material-design-icons-webfont | |
-
-刷新字库
-
-`fc-cache -f -v`
 
 ### Misc
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
+| 启动器 | yay -S rofi-lbonn-wayland |     |
 | 编辑器 | yay -S visual-studio-code-bin | |
 | 磁盘管理 | sudo pacman -S gparted |     |
 | 启动盘制作 | sudo pacman -S ventoy |     |
