@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-swww init
+swww-daemon --format xrgb&
 while true;do
     DIR=~/Pictures/wallpaper
     PICS=($(ls ${DIR}))
     RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
-    swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type random --transition-duration 3
+    swww img ${DIR}/"${RANDOMPICS}" --transition-fps 30 --transition-type random --transition-duration 3
     sleep 60
 done
