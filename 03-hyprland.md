@@ -63,13 +63,12 @@
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
 | 编辑器 | yay -S visual-studio-code-bin | |
-| 编辑器 | sudo pacman -s neovide python-pynvim | |
 | 磁盘管理 | sudo pacman -S gparted |     |
 | 启动盘制作 | sudo pacman -S ventoy |     |
 | 防火墙 | sudo pacman -S gufw | sudo ufw enable |
 | 笔记  | sudo pacman -S joplin-desktop |     |
 | 字体管理器 | sudo pacman -S font-manager |     |
-| 办公软件 | sudo pacman -S libreoffice libreoffice-fresh-zh-cn | 直接回车或选择 [1] |
+| 办公软件 | sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn | |
 | 科学上网 | sudo pacman -S v2raya |     |
 | 浏览器 | yay - S google-chrome |     |
 | 剪贴板 | sudo pacman -S cliphist | |
