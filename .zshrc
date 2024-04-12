@@ -160,7 +160,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 eval "$(starship init zsh)"
 
 # z.lua
-eval "$(lua /usr/share/z.lua/z.lua --init bash once enhanced)"
+eval "$(lua /usr/share/z.lua/z.lua --init zsh once enhanced)"
 
 # ##############################################################################
 # 其他
@@ -177,5 +177,3 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 # neofetch
 # neofetch
 
-# python venvs
-# source ~/.venvs/study/bin/activate
