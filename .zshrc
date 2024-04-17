@@ -177,3 +177,5 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 # neofetch
 # neofetch
 
+# python venvs
+source ~/.venvs/study/bin/python

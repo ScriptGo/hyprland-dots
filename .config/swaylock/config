@@ -1,7 +1,7 @@
 # general
 fade-in=0.3
-effect-blur=10x5 -c 0B0A10ff
-effect-scale=0.3
+effect-blur=13x13 -c 0B0A10ff
+effect-vignette=0.5:0.5
 show-failed-attempts
 
 ignore-empty-password
@@ -13,8 +13,8 @@ screenshots
 
 # indicator
 indicator
-indicator-radius=180
-indicator-thickness=15
+indicator-radius=200
+indicator-thickness=20
 indicator-caps-lock
 
 # grace
