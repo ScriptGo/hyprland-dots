@@ -163,7 +163,7 @@
     },
     "custom/cava": {
         "format": "{}",
-        "exec": "~/.scripts/cava.sh",
+        "exec": "$HOME/.scripts/cava.sh",
         "tooltip": false
     },
     "custom/logo": {
@@ -181,7 +181,7 @@
     },
     "custom/powermenu": {
         "format": " {}",
-        "on-click": "~/.scripts/powermenu.sh",
+        "on-click": "$HOME/.scripts/powermenu.sh",
         "tooltip": false
     }
 }

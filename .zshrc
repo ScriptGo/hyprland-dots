@@ -28,7 +28,7 @@ setopt SHARE_HISTORY
 # 为历史记录中的命令添加时间戳
 setopt EXTENDED_HISTORY
 
-HISTFILE=~/.zhistory        # 记录文件存放位置
+HISTFILE=$HOME/.zhistory        # 记录文件存放位置
 HISTSIZE=10000              # 历史文件记录的最大行数
 SAVEHIST=10000              # 保留历史记录的最大行数
 HIST_STAMPS="yyyy-mm-dd"    # 历史命令的命时间格式
@@ -131,7 +131,7 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 
-alias szr="source ~/.zshrc"
+alias szr="source $HOME/.zshrc"
 
 # 在命令行直接输入带有以下后缀的文件，会在 nvim 中打开
 alias -s html='nvim'
@@ -167,7 +167,7 @@ eval "$(lua /usr/share/z.lua/z.lua --init zsh once enhanced)"
 # ##############################################################################
 
 # 将 ~/.local/bin 加入 PATH
-export PATH=~/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files'
@@ -178,4 +178,4 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 # neofetch
 
 # python venvs
-source ~/.venvs/study/bin/python
+source $HOME/.venvs/study/bin/python

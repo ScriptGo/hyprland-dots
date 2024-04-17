@@ -10,13 +10,13 @@ mpd_host = "localhost"
 mpd_port = "6600"
 
 mpd_connection_timeout = "5" 
-mpd_music_dir = "~/Music"
+mpd_music_dir = "$HOME/Music"
 mpd_crossfade_time = "5"
 
 [Dirs]
 
-ncmpcpp_directory  = "~/.ncmpcpp"
-lyrics_directory  = "~/.ncmpcpp/lyrics"
+ncmpcpp_directory  = "$HOME/.ncmpcpp"
+lyrics_directory  = "$HOME"/.ncmpcpp/lyrics"
 
 [Visualizer]
 
@@ -242,6 +242,6 @@ external_editor = vim
 #lastfm_preferred_language = en
 #space_add_mode = add_remove
 
-execute_on_song_change = "~/.scripts/art.sh"
+execute_on_song_change = "$HOME/.scripts/ncmpcpp.sh"
 #execute_on_song_change = dunstify -a "ncmpcpp" "Now Playing" -i "~/.config/dunst/icons/music.svg" "$(mpc current -f "[%title%] [[- %artist%]]")"
 #execute_on_player_state_change = ""

@@ -2,7 +2,7 @@
 
 swww-daemon --format xrgb&
 while true;do
-    DIR=~/Pictures/wallpaper
+    DIR=$HOME/Pictures/wallpaper
     PICS=($(ls ${DIR}))
     RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
     swww img ${DIR}/"${RANDOMPICS}" --transition-fps 30 --transition-type random --transition-duration 3
