@@ -120,6 +120,18 @@ npm config set registry https://registry.npmmirror.com
 
 ## 配置
 
+### 家目录改名
+
+打开终端执行下面的命令
+
+```bash
+export LANG=en_US.UTF-8
+xdg-user-dirs-gtk-update
+export LANG=zh_CN.UTF-8
+```
+
+注销或重启后生效
+
 ### zsh
 
 1.切换shell
@@ -171,36 +183,3 @@ TRIM 会帮助清理 SSD 中的块，从而延长 SSD 的使用寿命。
 sudo pacman -S tlp
 sudo systemctl enable tlp
 ```
-
-### 其他
-
-强制应用使用 `wayland` 环境
-
-使用 `hyprctl clients` 查看程序是否在 `xwayland` 中运行
-
-1.基于 `electron` 的程序
-
-编辑 ==~/.config/electron-flags.conf==
-
-添加以下内容
-
-```bash
---enable-features=WaylandWindowDecorations
---ozone-platform-hint=auto
---gtk-version=4
-```
-
-2.chrome
-
-编辑 ~/.config/chrome-flags.conf
-
-添加以下内容
-
-```bash
---enable-features=UseOzonePlatform
---ozone-platform=wayland
---gtk-version=4
-```
-
-打开 chrome, 输入 `chrome://flags` 然后搜索 `ozone` , 选择 `Wayland` 即可
-
