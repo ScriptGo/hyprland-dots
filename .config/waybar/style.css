@@ -9,7 +9,6 @@
 
 window#waybar {
     background-color: transparent;
-    color: #ebdbb2;
 }
 
 button#label {
@@ -17,15 +16,15 @@ button#label {
 }
 
 tooltip {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: transparent;
+    color: #ddc7a1;
     border-radius: 10px;
     border: solid 1px #FE8019;
 }
 
 tooltip label {
-    background: #282828;
-    color: #ebdbb2;
+    background-color: transparent;
+    color: #ddc7a1;
     text-shadow: none;
     border: none;
 }
@@ -60,14 +59,12 @@ tooltip label {
 }
 
 #workspaces button.active {
-    background-color: #427b58;
-    color: #282828;
     border: solid 2px #FE8019;
 }
 
 #clock {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -77,7 +74,7 @@ tooltip label {
 }
 
 #cpu {
-    background-color: #282828;
+    background-color: #32302f;
     color: #689d6a;
     border-radius: 10px;
     margin: 5px;
@@ -88,7 +85,7 @@ tooltip label {
 }
 
 #memory {
-    background-color: #282828;
+    background-color: #32302f;
     color: #c8779b;
     border-radius: 10px;
     margin: 5px;
@@ -99,7 +96,7 @@ tooltip label {
 }
 
 #temperature {
-    background-color: #282828;
+    background-color: #32302f;
     color: #f0932b;
     border-radius: 10px;
     margin: 5px;
@@ -110,7 +107,7 @@ tooltip label {
 }
 
 #temperature.critical {
-    background-color: #282828;
+    background-color: #32302f;
     color: #eb4d4b;
     border-radius: 10px;
     margin: 5px;
@@ -121,8 +118,8 @@ tooltip label {
 }
 
 #pulseaudio {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -132,13 +129,13 @@ tooltip label {
 }
 
 #pulseaudio.muted {
-    background-color: #282828;
+    background-color: #32302f;
     color: #eb4d4b;
 }
 
 #bluetooth {
-    background: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -148,8 +145,8 @@ tooltip label {
 }
 
 #network {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -159,24 +156,13 @@ tooltip label {
 }
 
 #network.disconnected {
-    background-color: #282828;
+    background-color: #32302f;
     color: #f53c3c;
 }
 
 #backlight {
-    background-color: #282828;
-    color: #ebdbb2;
-    border-radius: 10px;
-    margin: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0px 10px 0px 10px;
-    font-weight: bold;
-}
-
-#backlight {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -186,8 +172,8 @@ tooltip label {
 }
 
 #battery {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-right: 5px;
@@ -209,7 +195,7 @@ tooltip label {
 }
 
 #tray {
-    background-color: #282828;
+    background-color: #32302f;
     color: #ec7024;
     border: none;
     margin: 5px 5px 5px 5px;
@@ -218,7 +204,7 @@ tooltip label {
 }
 
 #custom-cava {
-    background-color: #282828;
+    background-color: #32302f;
     color: #BF616A;
     border-radius: 10px;
     margin: 5px;
@@ -228,7 +214,7 @@ tooltip label {
 }
 
 #custom-logo {
-    background-color: #282828;
+    background-color: #32302f;
     color: #cdd6f4;
     border-radius: 0px 24px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -245,8 +231,8 @@ tooltip label {
 }
 
 #custom-pacman {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: #32302f;
+    color: #ddc7a1;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;
@@ -256,8 +242,8 @@ tooltip label {
 }
 
 #custom-powermenu {
-    background-color: #e23c2c;
-    color: #282828;
+    background-color: #ea6962;
+    color: #32302f;
     border-radius: 10px;
     margin: 5px;
     margin-left: 5px;

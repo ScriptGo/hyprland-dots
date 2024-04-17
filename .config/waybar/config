@@ -23,8 +23,8 @@
         "format": "{icon}",
         "format-icons": {
             "1": "<span color='#00FF00'></span>",
-            "2": "<span color='#FFFFFF'></span>",
-            "3": "<span color='#FFFF00'></span>",
+            "2": "<span color='#FFFFFF'></span>",
+            "3": "<span color='#FFFF00'></span>",
             "4": "<span color='#00FFFF'></span>",
             "5": "<span color='#A020F0'></span>",
             "6": "<span color='#FF0000'></span>",
@@ -38,10 +38,10 @@
         "interval": 1,
         "timezone": "Asia/Shanghai",
         "locale": "zh_CN.UTF-8",
-        "format": "<span color='#b16286'> </span>{:%H:%M:%S}"
+        "format": "<span color='#d3869b'> </span>{:%H:%M:%S}"
     },
     "clock#date": {
-        "format": "<span color='#458588'> </span>{:%A %m/%d}",
+        "format": "<span color='#89b482'> </span>{:%A %m/%d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -49,7 +49,7 @@
                 "months": "<span color='#5e81ac'><b>{}</b></span>",
                 "days": "<span color='#88c0d0'><b>{}</b></span>",
                 "weekdays": "<span color='#d08770'><b> {} </b></span>",
-                "today": "<span color='#bf616a'><b><u>{}</u></b></span>"
+                "today": "<span color='#fb4934'><b><u>{}</u></b></span>"
             }
         }
     },
@@ -75,7 +75,7 @@
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "<span color='#98971a'>{icon}</span> {volume}%",
+        "format": "<span color='#d8a657'>{icon}</span> {volume}%",
         "format-muted": "婢 Muted",
         "format-icons": {
             "headphone": "",
@@ -95,8 +95,7 @@
         "on-click-right": "pavucontrol"
     },
     "bluetooth": {
-        "format-on": "<span color='#458588'> </span>",
-        "format-off": "<span color='#cc241d'> </span>",
+        "format-on": "<span color='#7daea3'> </span>",
         "format-connected": "<span color='#00FF00'> </span>{device_alias}",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -104,9 +103,9 @@
         "on-click-right": "kitty -e bluetoothctl"
     },
     "network": {
-        "format-ethernet": " {ifname}",
-        "tooltip-format-ethernet": " {ifname} via {gwaddr}",
-        "format-wifi": "<span color='#689d6a'>{icon}</span> ",
+        "format-ethernet": "<span color='#7daea3'></span> {ifname}",
+        "tooltip-format-ethernet": "<span color='#7daea3'></span> {ifname} via {gwaddr}",
+        "format-wifi": "<span color='#89b482'>{icon}</span> ",
         "tooltip-format-wifi": "{essid} via {ifname}, Strength: {signalStrength}%",
         "format-icons": [
             "󰤬",
@@ -114,11 +113,11 @@
             "󰤧",
             "󰤪"
         ],
-        "format-disconnected": " Disconnected",
+        "format-disconnected": "<span color='#ea6962'> </span>Disconnected",
         "on-click": "~/.scripts/wifi-menu.sh"
     },
     "backlight": {
-        "format": "<span color='#ebcb8b'>{icon}</span> {percent}%",
+        "format": "<span color='#d8a657'>{icon}</span> {percent}%",
         "format-icons": [
             "",
             "",
@@ -136,7 +135,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
+        "format": "<span color='#a9b665'>{icon}</span> {capacity}%",
         "format-charging": " {icon} {capacity}%",
         "format-plugged": " {capacity}%",
         "format-icons": [
@@ -173,7 +172,7 @@
     },
     "custom/pacman": {
         "interval": 360,
-        "format": "<span color='#a3be8c'></span> {}",
+        "format": "<span color='#a9b665'></span> {}",
         "exec": "checkupdates | wc -l",
         "exex-if": "checkupdates",
         "on-click": "kitty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
