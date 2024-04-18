@@ -3,7 +3,7 @@
 ## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
 
 format = """[](#d65d0e)$os[](bg:#d79921 fg:#d65d0e)$directory[ ](#d79921)"""
-right_format = """$git_branch$git_status$python$red$cmd_duration"""
+right_format = """$git_branch$git_status$python$cmd_duration"""
 
 # 在提示符之间插入空行
 add_newline = true
@@ -111,11 +111,6 @@ deleted = "${count} "
 disabled = false
 detect_extensions = ['py']
 detect_folders = ['python', '.venvs']
-
-[red]
-disabled = false
-detect_extensions = ['red']
-detect_folders = ['red']
 
 [cmd_duration]
 disabled = false
