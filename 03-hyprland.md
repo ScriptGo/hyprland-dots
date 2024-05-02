@@ -56,7 +56,7 @@
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
-| 启动器 | yay -S rofi-lbonn-wayland |     |
+| 启动器 | yay -S rofi-wayland |     |
 | 编辑器 | yay -S visual-studio-code-bin | |
 | 磁盘管理 | sudo pacman -S gparted |     |
 | 启动盘制作 | sudo pacman -S ventoy |     |
