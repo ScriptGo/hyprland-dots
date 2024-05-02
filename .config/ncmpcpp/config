@@ -10,13 +10,13 @@ mpd_host = "localhost"
 mpd_port = "6600"
 
 mpd_connection_timeout = "5" 
-mpd_music_dir = "$HOME/Music"
+mpd_music_dir = "~/Music"
 mpd_crossfade_time = "5"
 
 [Dirs]
 
-ncmpcpp_directory  = "$HOME/.ncmpcpp"
-lyrics_directory  = "$HOME"/.ncmpcpp/lyrics"
+ncmpcpp_directory  = "~/.ncmpcpp"
+lyrics_directory  = "~/.ncmpcpp/lyrics"
 
 [Visualizer]
 
