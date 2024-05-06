@@ -75,7 +75,7 @@
 | --- | ------- | --- |
 | 网络工具 | sudo pacman -S net-tools |     |
 | 替代curl | sudo pacman -S httpie |     |
-| 显示系统信息 | sudo pacman -S neofetch btop |     |
+| 显示系统信息 | sudo pacman -S btop |     |
 | 娱乐工具 | sudo pacman -S fortune-mod cowsay sl cmatrix |     |
 | 替换 find | sudo pacman -S fd |     |
 | 替换 grep | sudo pacman -S ripgrep |     |
