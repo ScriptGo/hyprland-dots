@@ -24,6 +24,13 @@
 | bg1 | #32302f | #32302f | #343f44 |
 | bg2 | #45403d | #45403d | #3d484d |
 
+## System
+
+| 快捷键 | 描述 |
+| ----- | --- |
+| Super + 0 | 锁屏 |
+| Super + x | 注销 |
+
 ## App
 
 | 快捷键 | 描述 |
@@ -32,7 +39,7 @@
 | Super + k | kitty |
 | Super + n | ncmpcpp |
 | Super + l | rofi |
-| Super + w | 重启 waybar |
+| Super + w | waybar |
 
 ## ScreenShot
 
@@ -41,14 +48,7 @@
 | PrtSc | 全屏 |
 | Alt + PrtSc | 倒计时全屏 |
 | Ctrl + PrtSc | 活动窗口 |
-| Super + PrtSc | 区域 |
-
-## System
-
-| 快捷键 | 描述 |
-| ----- | --- |
-| Super + 0 | 锁屏 |
-| Super + x | 注销 |
+| Super + PrtSc | 区域选择 |
 
 ## Windows
 
