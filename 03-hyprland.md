@@ -56,16 +56,14 @@
 
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
-| 启动器 | yay -S rofi-wayland |     |
-| 编辑器 | yay -S visual-studio-code-bin | |
-| 磁盘管理 | sudo pacman -S gparted |     |
-| 启动盘制作 | sudo pacman -S ventoy |     |
+| 启动器 | sudo pacman -S rofi-wayland |     |
 | 防火墙 | sudo pacman -S gufw | sudo ufw enable |
-| 笔记  | sudo pacman -S joplin-desktop |     |
-| 字体管理器 | sudo pacman -S font-manager |     |
+| 笔记软件 | sudo pacman -S joplin-desktop |     |
+| 字体管理 | sudo pacman -S font-manager |     |
 | 办公软件 | sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn | |
 | 科学上网 | sudo pacman -S v2raya |     |
 | 浏览器 | yay - S google-chrome |     |
+| 编辑器 | yay -S visual-studio-code-bin | |
 | 剪贴板 | sudo pacman -S cliphist | |
 | 截图 | sudo pacman -S grim slurp | |
 
