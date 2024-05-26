@@ -112,10 +112,6 @@ npm源配置
 npm config set registry https://registry.npmmirror.com
 ```
 
-#### red
-
-`sudo pacman -S lib32-gtk3`
-
 #### MariaDB
 
 1.安装MariaDB
