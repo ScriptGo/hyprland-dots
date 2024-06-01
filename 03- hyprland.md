@@ -57,11 +57,13 @@
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
 | 启动器 | sudo pacman -S rofi-wayland |     |
+| pynvim | sudo pacman -S python-pynvim |   |
 | 防火墙 | sudo pacman -S gufw | sudo ufw enable |
 | 笔记软件 | sudo pacman -S joplin-desktop |     |
 | 字体管理 | sudo pacman -S font-manager |     |
 | 办公软件 | sudo pacman -S libreoffice-fresh libreoffice-fresh-zh-cn | |
 | 科学上网 | sudo pacman -S v2raya |     |
+| 科学上网 | yay -S clash-verge-rev-bin |     |
 | 浏览器 | yay - S google-chrome |     |
 | 编辑器 | yay -S visual-studio-code-bin | |
 | 剪贴板 | sudo pacman -S cliphist | |
