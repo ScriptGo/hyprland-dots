@@ -48,7 +48,7 @@
 | 软件 | 安装命令 | 备注 |
 | --- | ------- | --- |
 | Sarasa | sudo pacman -S ttf-sarasa-gothic | |
-| 英文字体 | sudo pacman -S ttf-fira-code ttf-jetbrains-mono | |
+| 英文字体 | sudo pacman -S ttf-fira-code ttf-jetbrains-mono ttf-cascadia-code | |
 | Nerd | sudo pacman -S ttf-firacode-nerd ttf-jetbrains-mono-nerd | |
 | 图标 | sudo pacman -S awesome-terminal-fonts otf-font-awesome | |
 
