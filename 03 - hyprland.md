@@ -100,18 +100,6 @@
 
 ## 配置
 
-### 家目录改名
-
-打开终端执行下面的命令
-
-```bash
-export LANG=en_US.UTF-8
-xdg-user-dirs-gtk-update
-export LANG=zh_CN.UTF-8
-```
-
-注销或重启后生效
-
 ### zsh
 
 1.切换shell
